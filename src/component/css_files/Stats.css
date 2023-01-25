@@ -1,0 +1,66 @@
+#stats {
+  background-color: var(--stat-bg);
+  background-image: url('../imgs/stats.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+  padding-bottom: 80px;
+}
+#stats > h2 {
+  margin: auto;
+  width: max-content;
+  text-transform: capitalize;
+  font-size: 35px;
+  color: var(--main-color-font);
+}
+#stats > .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+#stats > .container > section {
+  background: var(--main-bg);
+  color: var(--main-color-font);
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+#stats > .container > section::before,
+#stats > .container > section::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: var(--main-color);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+#stats > .container > section::before {
+  left: 0;
+  bottom: -100%;
+}
+#stats > .container > section::after {
+  right: 0;
+  top: -100%;
+}
+#stats > .container > section:hover::before {
+  bottom: 0;
+}
+#stats > .container > section:hover::after {
+  top: 0;
+}
+#stats > .container > section > i {
+  font-size: 40px;
+}
+#stats > .container > section > h3 {
+  font-size: 55px;
+}
+#stats > .container > section > p {
+  color: var(--main-color);
+  font-style: italic;
+}

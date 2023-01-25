@@ -1,0 +1,86 @@
+#services {
+  background: var(--secoond-bg);
+}
+#services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+#services .container > .card {
+  display: grid;
+  background: var(--main-bg);
+  justify-items: center;
+  padding-top: 20px;
+  box-shadow: 0 0 5px var(--main-bg);
+  position: relative;
+  transition: 0.3s;
+  gap: 10px;
+}
+#services .container > .card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 5px;
+  background: var(--main-color);
+  transition: 0.3s;
+}
+#services .container > .card:hover::before {
+  width: 100%;
+}
+#services .container > .card:hover {
+  transform: translateY(-10px);
+}
+#services .container > .card > i {
+  font-size: 50px;
+  /* color: var(--txt-paragraph); */
+  color: #d5d5d5;
+}
+#services .container > .card > h2 {
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+#services .container > .card > .footer {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.045);
+}
+#services .container > .card > .footer > p {
+  padding: 5px 20px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+#services .container > .card > .footer > p::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: #d5d5d5;
+  position: absolute;
+  top: 0;
+  right: -35px;
+  transform: skewX(-25deg);
+}
+#services .container > .card > .footer > p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 110%;
+  height: 100%;
+  background: var(--main-color);
+  transform: skewX(-25deg);
+  z-index: -1;
+}
+#services .container > .card > .footer > a {
+  padding: 10px;
+  cursor: pointer;
+  color: var(--main-color);
+}

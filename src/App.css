@@ -1,0 +1,183 @@
+/* standard style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+:root {
+  --main-color: #2196f3;
+  --main-bg: #fff;
+  --secoond-bg: #ececec;
+  --txt-head: #000;
+  --txt-paragraph: #aaa;
+  --main-color-font: #000;
+  --shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  --hover-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  --stat-bg: rgba(255, 255, 255, 0.9);
+  --team-bg: rgb(243, 243, 243);
+  --hover-team-bg: rgb(227, 227, 227);
+}
+[data-mode="dark"] {
+  --main-bg: #000;
+  --stat-bg: rgba(0, 0, 0, 0.9);
+  --secoond-bg: #121212;
+  --main-color-font: #fff;
+  --shadow: 0 2px 15px rgb(250 250 250 / 10%);
+  --hover-shadow: 0 2px 15px rgb(250 250 250 / 20%);
+  --team-bg: rgb(15, 15, 15);
+  --hover-team-bg: rgb(25, 25, 25);
+}
+a,
+button {
+  all: initial;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#mode {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+#mode i {
+  color: #fff;
+  background: var(--main-color);
+  font-size: 50px;
+  padding: 5px;
+}
+/* for header style */
+h2.header {
+  width: max-content;
+  color: var(--main-color-font);
+  margin: auto;
+  border: 5px solid var(--main-color-font);
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  z-index: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+h2.header:hover {
+  color: var(--main-bg);
+  border: 5px solid var(--main-bg);
+}
+h2.header::before,
+h2.header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+h2.header::before {
+  left: -40px;
+}
+h2.header::after {
+  right: -40px;
+}
+h2.header:hover::before,
+h2.header:hover::after {
+  width: 50%;
+  height: 100%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+h2.header:hover::before {
+  left: 0;
+}
+h2.header:hover::after {
+  right: 0;
+}
+
+/* end root style */
+/* start header */
+
+
+/* end header */
+
+/* start main */
+body  main > section {
+  padding: 100px 0;
+}
+
+/* start article section */
+
+/* end article */
+
+/* start gallary */
+/* end gallary */
+
+/* start features */
+/* end features */
+
+/* start TESTIMONIALS */
+/* end TESTIMONIALS */
+
+/* start team */
+/* end team */
+
+/* start services */
+/* end services */
+
+/* start skills */
+/* end skills */
+
+/* start how section */
+/* end how section */
+
+/* start event */
+/* end event */
+
+/* start plans */
+/* end plans */
+
+/* start videa */
+/* end video */
+
+/* start stats */
+/* end stats */
+
+/* start discount */
+/* end discount */
+
+/* end main */
+
+
+/* START FOOTER */
+
+
+/* test */

@@ -1,0 +1,218 @@
+header {
+  height: 100vh;
+  background: var(--main-bg);
+}
+header > nav > .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: var(--main-bg);
+  height: 70px;
+}
+header > nav > .container > .left {
+  padding: 20px 10px;
+  padding-left: 0;
+  color: var(--main-color);
+}
+header > nav > .container > .right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+header > nav > .container > .right > a {
+  color: var(--main-color-font);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 15px;
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+header > nav > .container > .right > a:hover {
+  color: var(--main-color);
+  cursor: pointer;
+  background: var(--secoond-bg);
+}
+header > nav > .container > .right > a::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: var(--main-color);
+  top: 0;
+  left: -100%;
+  position: absolute;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+header > nav > .container > .right > a:hover::before {
+  left: 0;
+}
+/* pop section */
+header > nav > .container > .pop-other-links {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--main-bg);
+  grid-template-columns: auto 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  border-bottom: 2px solid var(--main-color);
+  z-index: 1;
+}
+header > nav > .container > .pop-other-links > section:not(:first-child) {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 20px;
+}
+@media only screen and (max-width: 800px) {
+  header > nav > .container > .pop-other-links {
+    padding-top: 20px;
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  header > nav > .container > .pop-other-links > section:first-child {
+    display: none;
+  }
+  header > nav > .container > .pop-other-links > section:not(:first-child) {
+    margin: 0;
+  }
+  header > nav > .container > .pop-other-links > section > a:last-child {
+    border-bottom: 2px solid var(--secoond-bg);
+  }
+  header > nav > .container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+  }
+  header > nav > .container > .right > a {
+    padding: 20px 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header > nav > .container > .pop-other-links {
+    grid-template-columns: 1fr;
+  }
+}
+header > nav > .container > .pop-other-links > section > a {
+  cursor: pointer;
+  color: var(--main-color);
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+header > nav > .container > .pop-other-links > section > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--secoond-bg);
+  left: -100%;
+  transition: 0.2s;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+header > nav > .container > .pop-other-links > section > a:hover::before {
+  left: 0;
+}
+header > nav > .container > .pop-other-links > section > a:not(:last-child) {
+  border-bottom: 2px solid var(--secoond-bg);
+}
+/* main header */
+header > main {
+  background-color: var(--main-bg);
+  background-image: linear-gradient(
+    -5deg,
+    var(--main-bg) 20%,
+    var(--secoond-bg) 20%,
+    var(--secoond-bg) 100%
+  );
+  height: calc(100% - 70px);
+  width: 100%;
+}
+header > main > .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  align-items: center;
+}
+header > main > .container > section > h1 {
+  font-size: 40px;
+  color: var(--main-color-font);
+}
+header > main > .container > section > p {
+  color: var(--txt-paragraph);
+}
+header > main > .container > section > img {
+  width: 100%;
+  object-fit: cover;
+  animation: movement 1s linear infinite alternate;
+  -webkit-animation: movement 1s linear infinite alternate;
+}
+@media only screen and (max-width: 900px) {
+  header > main > .container {
+    height: inherit;
+  }
+  main > .container > section:nth-child(2) {
+    display: none;
+  }
+  main > .container > section:nth-child(1) {
+    text-align: center;
+  }
+}
+@keyframes movement {
+  0% {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+}
+
+header > main > .container > section:last-child {
+  grid-column: 1/3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: end;
+  margin-bottom: 20px;
+}
+header > main > .container > section:last-child > a > i {
+  font-size: 50px !important;
+  animation: movement 0.2s infinite alternate;
+  -webkit-animation: movement 0.2s infinite alternate;
+  color: var(--main-color);
+  cursor: pointer;
+}

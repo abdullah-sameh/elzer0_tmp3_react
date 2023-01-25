@@ -1,0 +1,57 @@
+#testimonials {
+  background: var(--secoond-bg);
+}
+#testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+#testimonials .container > div {
+  background: var(--main-bg);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: relative;
+  padding: 20px;
+  text-transform: capitalize;
+}
+#testimonials .container > div > *:not(:nth-child(2)) {
+  margin: 10px 0;
+}
+#testimonials .container > div > h3 {
+  color: var(--main-color-font);
+}
+#testimonials .container > div > img {
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  width: 100px;
+  border-radius: 50%;
+  border: 10px solid var(--secoond-bg);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#testimonials .container > div > p:not(:nth-of-type(2)) {
+  color: var(--txt-paragraph);
+}
+#testimonials .container > div > p:nth-of-type(2) > i {
+  color: #ffc107;
+}
+#testimonials
+  .container
+  > div:is(:nth-of-type(2), :nth-of-type(3))
+  > p:nth-of-type(2)
+  > i:last-child {
+  color: var(--txt-paragraph);
+}
+#testimonials
+  .container
+  > div:is(:nth-of-type(5), :nth-of-type(6))
+  > p:nth-of-type(2)
+  > i:is(:nth-of-type(4), :last-child) {
+  color: var(--txt-paragraph);
+}
